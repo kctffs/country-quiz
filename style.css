@@ -21,7 +21,7 @@ body {
 }
 
 /* Quiz itself */
-.quiz {
+.quiz-questions {
     font-size: 3.5rem;
     padding: 0.8rem;
     background-color: #bf9b30;
@@ -49,6 +49,20 @@ body {
 .btns:hover {
     cursor: pointer;
     border: solid 2px #130049;
+}
+
+#start-btn {
+    font-size: 1.5rem;
+    background-color: #bf9b30;
+    border: solid 2px red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+}
+
+#start-btn:hover {
+    border: solid 4px green;
 }
 
 .hidden {
