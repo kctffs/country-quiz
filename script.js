@@ -21,10 +21,20 @@ function quizQuestion() {
 
 function seeableQuestion(question) {
     questionData.innerText = question.question;
+    question.answers.forEach(answer => {
+        let btn = document.createElement('btn');
+        btn.innerText = answer.text;
+        btn.classList.add('btns');
+        if (answer.correct ) {
+            btn.dataset.correct = answer.correct;
+        }
+        btn.addEventListener('click', chosenAnswer);
+        answerData.appendChild(btn);
+    })
 
 }
 
-function chosenAnswer() {
+function chosenAnswer(event) {
 
 }
 
