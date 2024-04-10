@@ -3,9 +3,10 @@ let nextBtn = document.getElementById('next-btn');
 let displayQuestion = document.getElementById('quiz-questions');
 let questionData = document.getElementById('question');
 let answerData = document.getElementById('answer-btns');
-
 let questionSort;
 let presentQuestionI;
+
+nextBtn.style.display = "none";
 
 startQuizBtn.addEventListener('click', startQuiz);
 nextBtn.addEventListener('click', () => {
@@ -25,6 +26,7 @@ function startQuiz() {
 function quizQuestion() {
     clearedHtml();
     seeableQuestion(questionSort[presentQuestionI]);
+    nextBtn.style.display= "none";
 }
 
 function seeableQuestion(question) {
@@ -53,12 +55,10 @@ function chosenAnswer(event) {
     let chosenBtn = event.target;
     let correct = chosenBtn.dataset.correct;
     Array.from(answerData.children);
-    nextBtn.classList.remove('vanish');
     if (questionSort.length > presentQuestionI + 1) {
-        nextBtn.classList.remove('vanish');
+        nextBtn.style.display = "flex";
     } else {
-        startQuizBtn.innerText = 'Go Again';
-        startQuizBtn.classList.remove('vanish');
+        startQuiz();
     }
 }
 

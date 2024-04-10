@@ -61,6 +61,10 @@ body {
     border: solid 2px #130049;
 }
 
+.btns:visited, .btns:focus, .btns:hover, .btns:active {
+    background-color: #ababab;
+}
+
 #start-btn {
     font-size: 1.5rem;
     background-color: #bf9b30;
