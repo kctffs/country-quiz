@@ -16,6 +16,7 @@ function startQuiz() {
 }
 
 function quizQuestion() {
+    clearedHtml();
     seeableQuestion(presentQuestion[presentQuestionI]);
 }
 
@@ -32,6 +33,13 @@ function seeableQuestion(question) {
         answerData.appendChild(btn);
     })
 
+}
+
+function clearedHtml() {
+    while (answerData.firstChild) {
+        answerData.removeChild
+        (answerData.firstChild);
+    }
 }
 
 function chosenAnswer(event) {
