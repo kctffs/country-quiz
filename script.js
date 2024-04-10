@@ -1,9 +1,17 @@
-let startQuizBtn = document.getElementsByClassName('start-btn');
+let startQuizBtn = document.getElementById('start-btn');
+let displayQuestion = document.getElementById('quiz-questions')
 
 startQuizBtn.addEventListener('click', startQuiz);
 
 function startQuiz() {
-    console.log('started Country Quiz');
+    console.log('Started Country Quiz');
+    startQuizBtn.style.display = "none";
+    displayQuestion.classList.remove('vanish');
+
+}
+
+function quizQuestion() {
+
 }
 
 function chosenAnswer() {
