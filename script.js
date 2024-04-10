@@ -1,15 +1,22 @@
 let startQuizBtn = document.getElementById('start-btn');
+let nextBtn = document.getElementById('next-btn');
 let displayQuestion = document.getElementById('quiz-questions');
 let questionData = document.getElementById('question');
 let answerData = document.getElementById('answer-btns');
-let presentQuestion;
+
+let questionSort;
+let presentQuestionI;
 
 startQuizBtn.addEventListener('click', startQuiz);
+nextBtn.addEventListener('click', () => {
+    presentQuestionI++;
+    quizQuestion();
+});
 
 function startQuiz() {
     console.log('Started Country Quiz');
     startQuizBtn.style.display = "none";
-    presentQuestion = questions.sort();
+    questionSort = questions.sort();
     presentQuestionI = 0;
     displayQuestion.classList.remove('vanish');
     quizQuestion();
@@ -17,11 +24,11 @@ function startQuiz() {
 
 function quizQuestion() {
     clearedHtml();
-    seeableQuestion(presentQuestion[presentQuestionI]);
+    seeableQuestion(questionSort[presentQuestionI]);
 }
 
 function seeableQuestion(question) {
-    questionData.innerText = question.question;
+    questionData.innerHTML = question.question
     question.answers.forEach(answer => {
         let btn = document.createElement('btn');
         btn.innerText = answer.text;
@@ -31,7 +38,7 @@ function seeableQuestion(question) {
         }
         btn.addEventListener('click', chosenAnswer);
         answerData.appendChild(btn);
-    })
+    });
 
 }
 
@@ -43,7 +50,16 @@ function clearedHtml() {
 }
 
 function chosenAnswer(event) {
-
+    let chosenBtn = event.target;
+    let correct = chosenBtn.dataset.correct;
+    Array.from(answerData.children);
+    nextBtn.classList.remove('vanish');
+    if (questionSort.length > presentQuestionI + 1) {
+        nextBtn.classList.remove('vanish');
+    } else {
+        startQuizBtn.innerText = 'Go Again';
+        startQuizBtn.classList.remove('vanish');
+    }
 }
 
 /* Quiz questions */
@@ -138,4 +154,4 @@ let questions = [
             { text: 'France', correct: false }
         ]
     }
-]
+];
