@@ -80,14 +80,17 @@ body {
 }
 
 #next-btn {
-    font-size: 1.5rem;
+    font-size: 3.5rem;
+    text-transform: uppercase;
     background-color: #bf9b30;
     border-radius: 4px;
-    margin: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 2rem;
+    margin: 2rem auto;
+    padding: 1rem
+    
+}
+
+#next-btn:hover {
+    border: solid 4px white;
 }
 
 .vanish {
