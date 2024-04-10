@@ -65,6 +65,6 @@ body {
     border: solid 4px green;
 }
 
-.hidden {
+.vanish {
     display: none;
 }
