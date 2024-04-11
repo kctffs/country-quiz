@@ -16,6 +16,7 @@ body {
     width: 100vw;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -47,6 +48,10 @@ body {
     margin: 0 0.5rem;
 }
 
+button:active {
+    background-color: #ababab;
+}
+
 .btns {
     font-size: 2rem;
     padding: 0.2rem;
@@ -61,7 +66,7 @@ body {
     border: solid 2px #130049;
 }
 
-.btns:visited, .btns:focus, .btns:hover, .btns:active {
+.btns:focus, .btns:hover, .btns:active {
     background-color: #ababab;
 }
 
@@ -72,7 +77,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 2rem;
+    margin: 1rem;
 }
 
 #start-btn:hover {
@@ -95,19 +100,19 @@ body {
 
 /* Scoring system */
 .page-top {
-    display: flex;
-    align-self: center;
+    display: grid;
+    justify-content: center;
 }
 
 #tally {
-    font-size: 3rem;
-    flex-direction: row;
+    font-size: 4rem;
     gap: 5rem;
+    margin-top: 2rem;
+    align-items: center;
 }
 
 #tallying {
-    font-size: 5.5rem;
-    text-align: center;
+    font-size: 6.2rem;
 }
 
 .vanish {
