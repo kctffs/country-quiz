@@ -1,4 +1,4 @@
-/* Variable storage */
+
 let startQuizBtn = document.getElementById('start-btn');
 let nextBtn = document.getElementById('next-btn');
 let displayQuestion = document.getElementById('quiz-questions');
@@ -9,18 +9,15 @@ let tallyingNum = document.getElementById('tallying');
 let questionSort;
 let presentQuestionI;
 
-/* Hiding content */
 tally.style.display = "none";
 nextBtn.style.display = "none";
 
-/* 'Home' page */
 startQuizBtn.addEventListener('click', startQuiz);
 nextBtn.addEventListener('click', () => {
     presentQuestionI++;
     quizQuestion();
 });
 
-/* From first question */
 function startQuiz() {
     console.log('Started Country Quiz');
     startQuizBtn.style.display = "none";
@@ -54,7 +51,6 @@ function seeableQuestion(question) {
 
 }
 
-/* Hiding html */
 function clearedHtml() {
     while (answerData.firstChild) {
         answerData.removeChild
@@ -75,7 +71,6 @@ function chosenAnswer(event) {
     }
 }
 
-/* Quiz questions */
 let questions = [
     {
         question: '1. What country is the most populated? (from 2024)',
@@ -169,7 +164,6 @@ let questions = [
     }
 ];
 
-/* Scoring function */
 function tallyingResults(isCorrect) {
     if (!isCorrect) {
       return;
