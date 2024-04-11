@@ -98,3 +98,17 @@ Country quiz is not specified to a certain genre of viewer however, for the gene
    -  Selecting the dropdown menu in the *Branch* catagory and choosing *Main*.
    -  After selecting this catagory, GitHub will refresh and provide a deployment catagory on the far right of your repository.
    -  [The link to the live webapp for Country Quiz is here:](https://kctffs.github.io/country-quiz/)
+
+## Credit.
+
+ - ### Content.
+   - Code for the scoring system that increased as the viewer chooses the correct answer was inspired by a [Slack Overflow Thread](https://stackoverflow.com/questions/68687270/increment-score-in-a-quiz-game-based-on-selecting-the-right-answers-with-an-obje).
+   - Code for the `.target` was taken from a [YouTube video](https://youtu.be/riDzcEQbX6k?si=Ya8RiD5kCJb_vCKg) by Web Dev Simplified.
+
+## Extra Information.
+
+ - ### Initial Project.
+   - There was a time where Country Quiz was going to be a Flag to Country quiz by using an image of a countries flag and four corresponding answers that are also images, but show the outline of four different countries.
+    - This quickly came to a halt as uploading a large amount of photos into the repository became tedious and free space vanished abruptly.
+    - It was also a dead end as the project was a struggle (being a new language) and the extra learning process was harder to implment and thus, Country Quiz was born.
+    - Here is a link to the [initial repository](https://github.com/kctffs/geography-quiz.git) if there is any interest but I assure you it's just full of photo's and no code.
