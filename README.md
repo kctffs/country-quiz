@@ -88,7 +88,7 @@ Country quiz is not specified to a certain genre of viewer however, for the gene
     - One bug encountered when implementing a scoring system into the quiz. The function created was being called and was tallying the score however, it would only tally on the first question and none after. This was resolved by having the variable moved as it was being called in the wrong function.
     - Another example of a bug encountered was in initial deployment, the quiz only got so far and then failed from an undefined variable. This was resolved by correcting the variable to the one needed being called.
 
- – ### Unfixed Bugs.
+ - ### Unfixed Bugs.
   - The only unfixed bug in the Country Quiz is the scpring tally as it continues to increase the score even after it has been selected once already.
 
  - ### Deployment.
@@ -104,6 +104,9 @@ Country quiz is not specified to a certain genre of viewer however, for the gene
  - ### Content.
    - Code for the scoring system that increased as the viewer chooses the correct answer was inspired by a [Slack Overflow Thread](https://stackoverflow.com/questions/68687270/increment-score-in-a-quiz-game-based-on-selecting-the-right-answers-with-an-obje).
    - Code for the `.target` was taken from a [YouTube video](https://youtu.be/riDzcEQbX6k?si=Ya8RiD5kCJb_vCKg) by Web Dev Simplified.
+
+ - ### Media.
+   - Favicon used for Country Quiz was from the website [favicon.io](https://favicon.io/) with the icon image being from [FontAwesome](https://fontawesome.com/icons).
 
 ## Extra Information.
 
