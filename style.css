@@ -93,6 +93,23 @@ body {
     border: solid 4px white;
 }
 
+/* Scoring system */
+.page-top {
+    display: flex;
+    align-self: center;
+}
+
+#tally {
+    font-size: 3rem;
+    flex-direction: row;
+    gap: 5rem;
+}
+
+#tallying {
+    font-size: 5.5rem;
+    text-align: center;
+}
+
 .vanish {
     display: none;
 }

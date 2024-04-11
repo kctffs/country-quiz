@@ -1,25 +1,36 @@
+/* Variable storage */
 let startQuizBtn = document.getElementById('start-btn');
 let nextBtn = document.getElementById('next-btn');
 let displayQuestion = document.getElementById('quiz-questions');
 let questionData = document.getElementById('question');
 let answerData = document.getElementById('answer-btns');
+let tally = document.getElementById('tally');
+let tallyingNum = document.getElementById('tallying');
 let questionSort;
 let presentQuestionI;
 
+/* Hiding content */
+tally.style.display = "none";
+tallying.style.display = "none";
 nextBtn.style.display = "none";
 
+/* 'Home' page */
 startQuizBtn.addEventListener('click', startQuiz);
 nextBtn.addEventListener('click', () => {
     presentQuestionI++;
     quizQuestion();
 });
 
+/* From first question */
 function startQuiz() {
     console.log('Started Country Quiz');
     startQuizBtn.style.display = "none";
     questionSort = questions.sort();
     presentQuestionI = 0;
     displayQuestion.classList.remove('vanish');
+    tally.style.display = "flex";
+    tallyingNum.style.display = "flex";
+    tallyingNum.textContent = 0;
     quizQuestion();
 }
 
@@ -44,6 +55,7 @@ function seeableQuestion(question) {
 
 }
 
+/* Hiding html */
 function clearedHtml() {
     while (answerData.firstChild) {
         answerData.removeChild
@@ -54,11 +66,13 @@ function clearedHtml() {
 function chosenAnswer(event) {
     let chosenBtn = event.target;
     let correct = chosenBtn.dataset.correct;
+    tallyingResults(correct);
     Array.from(answerData.children);
     if (questionSort.length > presentQuestionI + 1) {
         nextBtn.style.display = "flex";
     } else {
-        startQuiz();
+        startQuizBtn.style.display = "flex";
+        displayQuestion.classList.add('vanish');
     }
 }
 
@@ -150,8 +164,18 @@ let questions = [
         answers: [
             { text: 'Mexico', correct: false },
             { text: 'Turkey', correct: false },
-            { text: 'Spain', correct: true },
-            { text: 'France', correct: false }
+            { text: 'Spain', correct: false },
+            { text: 'France', correct: true }
         ]
     }
 ];
+
+/* Scoring function */
+function tallyingResults(isCorrect) {
+    if (!isCorrect) {
+      return;
+    }
+    const tallyUp = parseInt(tallyingNum.textContent, 10) || 0;
+
+  tallyingNum.textContent = tallyUp + 10;
+}
