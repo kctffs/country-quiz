@@ -89,7 +89,7 @@ Country quiz is not specified to a certain genre of viewer however, for the gene
     - Another example of a bug encountered was in initial deployment, the quiz only got so far and then failed from an undefined variable. This was resolved by correcting the variable to the one needed being called.
 
  - ### Unfixed Bugs.
-  - The only unfixed bug in the Country Quiz is the scpring tally as it continues to increase the score even after it has been selected once already.
+   - The only unfixed bug in the Country Quiz is the scpring tally as it continues to increase the score even after it has been selected once already.
 
  - ### Deployment.
    -  Country Quiz was deployed using GitHub and this was completed by:
