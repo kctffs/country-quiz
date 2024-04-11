@@ -11,7 +11,6 @@ let presentQuestionI;
 
 /* Hiding content */
 tally.style.display = "none";
-tallying.style.display = "none";
 nextBtn.style.display = "none";
 
 /* 'Home' page */
@@ -41,7 +40,7 @@ function quizQuestion() {
 }
 
 function seeableQuestion(question) {
-    questionData.innerHTML = question.question
+    questionData.innerHTML = question.question;
     question.answers.forEach(answer => {
         let btn = document.createElement('btn');
         btn.innerText = answer.text;
